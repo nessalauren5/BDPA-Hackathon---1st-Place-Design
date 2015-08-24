@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BDPA Retirement Planner</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link href="css/lightbox.css" rel="stylesheet">
+</head>
+
+<body class="">
+
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target="#myNavbar">
+              <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><span class="glyphicon glyphicon-usd"></span> &nbsp;Savings Longevity Tool</a>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
+            <ul class="nav navbar-nav navbar-right menu">
+              <li><a href="default.html" class="page-scroll">Home</a></li>
+              <li><a href="features.html" class="page-scroll active">Tools</a></li>
+              <li><a href="contactus.html" class="page-scroll">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid contact" >
+    <div class="container">
+      <div class="row">
+        <h2> Account Withdrawal Setup</h2></div>
+        <div class="row">
+          <form id="myform">
+            <div class="col-xs-6 col-md-4 col-lg-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Starting Balance</label>
+                <input type="email" class="form-control" id="balance" placeholder="$ Balance">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Withdrawal Amount</label>
+                <input type="email" class="form-control" id="amount" placeholder="$ Amount">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Yearly Rate of Return</label>
+                <input type="email" class="form-control" id="rate" placeholder=" % Rate">
+              </div>
+              <button type="button" class="btn btn-default btneff" id="track">Compute</button>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Withdrawal Period</label>
+                <div class="radio">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="104">
+                      Bi-Weekly
+                    </label>
+                  </div>
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="52" checked>
+                    Weekly
+                  </label>
+                </div>
+
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="12" >
+                    Monthly
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="4">
+                    Quarterly
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="2">
+                    Semi-Annual
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="1">
+                    Annual
+                  </label>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container-fluid notes">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 notes-bg">
+            <div class="container">
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                <p>This page was designed and coded as a part of the Coder's Rumble 2015 at the 40th BDPA Conference in Washington, D.C.</p>
+              </div>
+              <div class="col-md-offset-1 col-md-2 col-md-offset-1 col-sm-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+                <a href="http://www.bdpa.org" class="btn btn-default btneff">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="error">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Oops! </h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12"><p> You've missed an input or two..please fill out the entire form! </p></div>
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-md-3 col-lg-3">
+                  <button type="button" class="btn btn-default btneff" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <div class="modal fade" id="results">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title"><span id="status"></span></h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="col-md-11 text-center">
+                  <p><span id="results-body"></span></p>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-md-3 col-lg-3">
+                  <button type="button" class="btn btn-default btneff" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Copyright &copy; BDPA 2015 By <a href="http://www.v-anderson.com">v-anderson</a></p>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/jquery.js"></script>
+      <script src="js/accounting.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script>
+      $.fn.digits = function(){
+        return this.each(function(){
+          $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+        })
+      }
+      $(document).ready(function(){
+
+        $("#track").click(function(e) {
+          e.preventDefault();
+          //  <!-- calculate results -->
+
+          var check = document.getElementsByTagName('input');
+          var len = check.length;
+          for(var i=0;i<len;i++) {
+            if (check[i].value ==='')
+            {  $("#error").modal('show');
+            return false;
+          };
+        };
+
+        var balance = parseInt($("#balance").val(),10);
+        var amount= parseInt($("#amount").val(),10);
+        var rate = parseInt($("#rate").val(),10)/ 100.00;
+        var period = parseInt($("#myform input[type='radio']:checked").val(),10);
+        var numWithdrawals = 0;
+        if(period*amount > balance){
+          body = "Your savings will last less than a year. Please adjust your inputs to re-calculate.";
+        }else {
+          for(i=0;balance>=amount;i++){
+
+            balance-= period*amount;
+            balance+=rate*balance;
+          }
+
+          numWithdrawals = i;
+          remainder = balance;
+
+          body = "Your savings will last " + numWithdrawals + " years with withdrawals of " + accounting.formatMoney(amount);
+          if(balance > 0){
+            body += " and one final payment of " + balance;
+          }
+        }
+        if(numWithdrawals > 15){
+          status = " You are on track! ";
+        }
+        else{
+          status = "Uh-oh! You're savings won't last long...";
+        }
+        $("#results-body").html(body);
+        $("#status").html(status);
+        $("#results").modal('show');
+
+      });
+    });
+    </script>
+  </body>
+
+  </html>

@@ -1,0 +1,619 @@
+/** Install Fonts **/
+@font-face {
+  font-family: 'Arimo';
+  src:url('../fonts/Arimo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src:url('../fonts/Oxygen-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/**parralax code**/
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+body{font:18px/1.1 'Oxygen',sans-serif;background-color: black;}
+p{line-height:1.6;}
+/* Example page */
+strong{font-weight:bold;}
+header{height:100px;}
+header img{float:left;margin:14px 0 0 14px}
+header h1{margin-left:14px;float:left;font-size:20px;line-height:100px;}
+
+section {
+  min-height: 1000px;
+  position: relative;
+  width: 100%;
+  min-width: 1000px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+section:nth-of-type(1){background:black;height:1200px;}
+section:nth-of-type(2){background:black;height:1600px;}
+
+#home>div:nth-of-type(1){
+  background: url(../imgs/landing_bg.jpg) 50% 0 no-repeat fixed;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  background-position: -30px 0px;
+  top:-30px;left:0;
+  width:100%;
+}
+
+#how>div:nth-of-type(1) {
+  background: url(../imgs/tennistable.png) 50% 0 no-repeat fixed;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  width:100%;
+  top:0;left:0;
+}
+
+#story>div:nth-of-type(1) {
+  background: url(../imgs/vball.jpg) 10% 0 no-repeat fixed;
+  background-size: 100% auto;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  width:100%;
+  top:0;left:0;
+}
+
+#join>div:nth-of-type(1) {
+  background: url(../imgs/play.jpg) 50% 0 no-repeat fixed;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  width:100%;
+  top:0;left:0;
+}
+
+#events>div:nth-of-type(1) {
+  background: url(../imgs/tennis.jpg) 50% 0 no-repeat fixed;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  width:100%;
+  top:0;left:0;
+}
+
+#contact>div:nth-of-type(1) {
+  background: url(../imgs/COURT.jpg) 50% 0 no-repeat fixed;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  width:100%;
+  top:0;left:0;
+}
+
+#slam>div:nth-of-type(1){
+  background: url(../imgs/courtbg.jpg) 100% 0 no-repeat fixed;
+  margin: 0;
+  height: 1600px;
+  position:absolute;
+  background-position: -30px 0px;
+  top:-30px;left:0;
+  width:100%;
+}
+
+/* #home>div:nth-of-type(2) {
+background: url(../imgs/lez.png) 50% 0 no-repeat fixed;
+margin: 0;
+height: 1600px;
+position:absolute;
+top:0px;right:-300px;
+width:100%;
+}*/
+
+section h1{color:white;width:100%;font-size:65px;margin-bottom:14px;  font-family: Raleway;}
+
+section p{color:white;width:50%;font-family:'Arimo',sans-serif;}
+.stepsub {
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+}
+section article{position:absolute;top:130px;left:0px;width:100%;z-index:4;}
+h3 .steptext{
+  font-size:14px;
+  width=100%;
+  text-align:left;
+}
+.parallax-item{position:absolute;z-index:5;top:0px;right:400px;}
+
+/* custom css */
+.carousel img{
+  -webkit-filter: blur(3px);
+}
+
+.site_nav {
+  font-family: 'Oxygen', serif;
+}
+
+#choices{
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.players{
+  color: white;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height:100%;
+}
+
+
+/* style for anchors in nav */
+.site_nav a {
+  color: #ffffff;
+  font-size: 0.9em;
+  line-height: 5.3125em;
+  margin: 0;
+  padding: 0 49px 0 0;
+  position: relative;
+  top: -10px;
+  transition: all 0.5s ease 0s;
+  text-transform: uppercase;
+}
+
+.navbar-nav > li:nth-of-type(1) > a{
+  color:#00c6ff !important;
+  background: -webkit-linear-gradient(left, #0050ff, #00c6ff);
+  background: -o-linear-gradient(left, #0050ff, #00c6ff); /* For Opera 11.1 to 12.0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav li:nth-of-type(2) a{
+  color:#00ff18;
+  background: -webkit-linear-gradient(left,#00c6ff, #00ff18);
+  background: -o-linear-gradient(left,#00c6ff, #00ff18); /* For Opera 11.1 to 12.0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav  li:nth-of-type(3) a{
+  color:#fffd00;
+  background: -webkit-linear-gradient(left, #00ff18, #fffd00);
+  background: -o-linear-gradient(left, #00ff18, #fffd00); /* For Opera 11.1 to 12.0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav  li:nth-of-type(4) a{
+  color:#ffa400;
+  background: -webkit-linear-gradient(left,#fffd00, #ffa400);
+  background: -o-linear-gradient(left,#fffd00, #ffa400); /* For Opera 11.1 to 12.0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav  li:nth-of-type(5) a{
+  color:#e14000;
+  background: -webkit-linear-gradient(left,#ffa400, #e14000);
+  background: -o-linear-gradient(left,#ffa400, #e14000); /* For Opera 11.1 to 12.0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.navbar-nav  li:nth-of-type(6) a{
+  color:#9405e6;
+  background: -webkit-linear-gradient(left,#e14000,#9405e6);
+  background: -o-linear-gradient(left,#e14000,#9405e6); /* For Opera 11.1 to 12.0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-nav >li> a:hover {
+  text-decoration: none;
+  color:white;
+}
+
+.icons{
+  max-width: 30px;
+}
+
+.icon-text{
+  font-size:12px !important;
+  color:white !important;
+  vertical-align: middle;
+}
+input,textarea{
+  color:black !important;
+  font-family: 'Arimo',sans-serif;
+}
+button{
+  color:white !important;
+  font-family: 'Oxygen',sans-serif;
+  text-transform: capitalize;
+}
+
+#home h1{
+  margin-top: 10%;
+  font-family: Raleway;
+}
+
+
+hr {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.15);
+  border-style: none;
+  border-width: 0;
+  margin: 34px 0;
+  height: 1px;
+}
+
+#home h3{
+  color:white;
+  font-size:32px;
+  font-family: 'Arima',sans-serif;
+}
+
+h3{
+  color:white;
+  font-family: 'Oxygen',sans-serif;
+}
+
+.steps{
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.box{
+  width:100%;
+  height:150px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow:hidden;
+}
+
+.overlay {
+  height:150px;
+  background:rgba(0,0,0,.75);
+  text-align:center;
+  padding:35px;
+  opacity:0;
+  -webkit-transition: opacity .05s ease;
+  -moz-transition: opacity .05s ease;}
+
+  .box:hover .overlay {
+    opacity:1;
+  }
+
+  .plus{
+    font-family:Helvetica;
+    font-weight:900;
+    color:rgba(255,255,255,.85);
+    font-size:70px;
+  }
+
+  .story{
+    font-weight: 400px;
+    line-height: 1.3em;
+    font-size: 27px;
+    color:white;
+    font-family: 'Oxygen',sans-serif;
+    text-align: justify;
+  }
+
+.avi-choice img{
+  max-width:100px;
+}
+  /** overriden bootstrap styles **/
+
+  .container-fluid{
+    padding: 0;
+    margin: 0;
+  }
+
+  .control-label{
+    color:white;
+    font-family: 'Oxygen',sans-serif;
+  }
+
+  .checkbox{
+    color:white;
+    font-family: 'Oxygen',sans-serif;
+  }
+  .navbar-default {
+    background-color: transparent;
+    border-color: none;
+
+  }
+  .navbar {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    min-height: 50px;
+    position: absolute;
+    z-index: 5000;
+    width:100%;
+  }
+
+  .modal-dialog {
+    top: 50px;
+  }
+  .modal-content {
+    background-color: #3399cc !important;
+  }
+
+  .modal-header h4{
+    color: white !important;
+  }
+
+  .dropdown-menu{
+      top: -3%;
+  }
+  @media (max-width:768px) and (min-width:500px){
+
+    section {
+      max-width: 768px;
+      min-width: 500px;
+      min-height:300px;
+    }
+
+    .icons{
+
+    }
+
+    .navbar-brand {
+      color:#777;
+      font-family:'Raleyway',sans-serif;
+    }
+
+    .navbar-default {
+      background-color: white !important;
+      border-color: none !important;
+    }
+    .navbar {
+      background-color: white !important;
+      border: none !important;
+      margin-bottom: 0px !important;
+      margin-top: 0px;
+      min-height: 50px;
+      position: fixed;
+      z-index: 5000;
+      width:100% !important;
+    }
+
+    .navbar .navbar-nav {
+      display: inline-block;
+      float: left;
+      vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+      text-align: left;
+    }
+    #home>div:nth-of-type(1){
+      background: url(../imgs/softball-sm.jpg) no-repeat fixed;
+      background-size: 768px 500px;
+      margin: 0;
+      min-height: 300px;
+      max-width:768px;
+      top:0px;left:0;
+    }
+    #how>div:nth-of-type(1) {
+      background: url(../imgs/tennistable-sm.png) no-repeat fixed;
+      background-size: 768px 100%;
+      margin: 0;
+      min-height: 900px !important;
+      max-width:768px;
+      top:0px;left:0;
+    }
+    #story>div:nth-of-type(1) {
+      background: url(../imgs/vball-sm.jpg) 10% 0 no-repeat fixed;
+      background-size: 768px 100%;
+      margin: 0;
+      min-height: 1200px !important;
+      max-width:768px;
+      top:0px;left:0;
+    }
+
+    #join>div:nth-of-type(1) {
+      background: url(../imgs/pool-sm.jpg) 50% 0 no-repeat fixed;
+      background-size: 768px 100%;
+      margin: 0;
+      min-height: 1200px !important;
+      max-width:768px;
+      top:0px;left:0;
+    }
+
+    #events>div:nth-of-type(1) {
+      background: url(../imgs/tennis-sm.jpg) 50% 0 no-repeat fixed;
+      background-size: 768px 100%;
+      margin: 0;
+      min-height: 1200px !important;
+      max-width:768px;
+      top:0px;left:0;
+    }
+
+    #contact>div:nth-of-type(1) {
+      background: url(../imgs/COURT-sm.jpg) 50% 0 no-repeat fixed;
+      background-size: 768px 100%;
+      margin: 0;
+      min-height: 1200px !important;
+      max-width:768px;
+      top:0px;left:0;
+    }
+    section:nth-of-type(1){background:black;height:500px;}
+    section:nth-of-type(2){background:black;height:900px;}
+    section:nth-of-type(3){background:black;height:900px;}
+    section:nth-of-type(4){background:black;height:900px;}
+    section:nth-of-type(5){background:black;height:900px;}
+    section:nth-of-type(6){background:black;height:900px;}
+    section h1{
+      font-size:48px;
+    }
+    #how h1 {
+      font-size: 36px !important;
+    }
+    h3{
+      font-size:15px;
+    }
+
+    .steps{
+      max-width: 100px !important;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    .stepsub {
+      font-size: 14px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    .steptext{
+      font-size:12px !important;
+      width=100%;
+      text-align:left;
+    }
+    .story{
+      font-size: 18px !important;
+    }
+  }
+
+  @media (max-width:414px){
+
+    section {
+      max-width: 414px;
+      min-width: 50px;
+      min-height:300px;
+    }
+
+    .icons{}
+
+
+      .navbar-brand {
+        color:#777;
+        font-family:'Raleyway',sans-serif;
+      }
+
+      .navbar-default {
+        background-color: white !important;
+        border-color: none !important;
+      }
+      .navbar {
+        background-color: white !important;
+        border: none !important;
+        margin-bottom: 0px !important;
+        margin-top: 0px;
+        min-height: 50px;
+        position: fixed;
+        z-index: 5000;
+        width:100% !important;
+      }
+
+      .navbar .navbar-nav {
+        display: inline-block;
+        float: left;
+        vertical-align: top;
+      }
+
+      .navbar .navbar-collapse {
+        text-align: left;
+      }
+      #home>div:nth-of-type(1){
+        background: url(../imgs/softball-sm.jpg) no-repeat fixed;
+        background-size: 414px 500px;
+        margin: 0;
+        min-height: 300px;
+        max-width:414px;
+        top:0px;left:0;
+      }
+      #how>div:nth-of-type(1) {
+        background: url(../imgs/tennistable-sm.png) no-repeat fixed;
+        background-size: 414px 100%;
+        margin: 0;
+        min-height: 900px !important;
+        max-width:414px;
+        top:0px;left:0;
+      }
+      #story>div:nth-of-type(1) {
+        background: url(../imgs/vball-sm.jpg) 10% 0 no-repeat fixed;
+        background-size: 414px 100%;
+        margin: 0;
+        min-height: 1200px !important;
+        max-width:414px;
+        top:0px;left:0;
+      }
+
+      #join>div:nth-of-type(1) {
+        background: url(../imgs/pool-sm.jpg) 50% 0 no-repeat fixed;
+        background-size: 414px 100%;
+        margin: 0;
+        min-height: 1200px !important;
+        max-width:414px;
+        top:0px;left:0;
+      }
+
+      #events>div:nth-of-type(1) {
+        background: url(../imgs/tennis-sm.jpg) 50% 0 no-repeat fixed;
+        background-size: 414px 100%;
+        margin: 0;
+        min-height: 1200px !important;
+        max-width:414px;
+        top:0px;left:0;
+      }
+
+      #contact>div:nth-of-type(1) {
+        background: url(../imgs/COURT-sm.jpg) 50% 0 no-repeat fixed;
+        background-size: 414px 100%;
+        margin: 0;
+        min-height: 1200px !important;
+        max-width:414px;
+        top:0px;left:0;
+      }
+      section:nth-of-type(1){background:black;height:500px;}
+      section:nth-of-type(2){background:black;height:900px;}
+      section:nth-of-type(3){background:black;height:900px;}
+      section:nth-of-type(4){background:black;height:900px;}
+      section:nth-of-type(5){background:black;height:900px;}
+      section:nth-of-type(6){background:black;height:900px;}
+      section h1{
+        font-size:36px;
+      }
+      #how h1 {
+        font-size: 26px !important;
+      }
+      h3{
+        font-size:12px;
+      }
+
+      .steps{
+        max-width: 70px !important;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+
+      .stepsub {
+        font-size: 12px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      .steptext{
+        font-size:10px !important;
+        width=100%;
+        text-align:left;
+      }
+      .story{
+        font-size: 14px !important;
+      }
+
+      .control-label, #sports{
+        font-size:10px !important;
+      }
+    }
